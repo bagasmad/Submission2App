@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">GitList</string>
+    <string name="aboutMe_mail">bagas.m@mail.ugm.ac.id</string>
+    <string name="aboutMe_name">Bagas Darmawan</string>
+    <string name="text_visit_github">Visit GitHub</string>
+    <string name="aboutMe_about_me">About Me</string>
+    <string name="splash_jargon">Github User List App</string>
+    <string name="text_name_placeholder">John Doe</string>
+    <string name="text_number_placeholder">18</string>
+    <string name="text_followers">followers</string>
+    <string name="text_following">following</string>
+    <string name="text_dot">•</string>
+    <string name="text_repositories">repositories</string>
+    <string name="text_location_placeholder">location location</string>
+    <string name="text_company_name_placeholder">company name</string>
+    <string name="text_works_at">works at</string>
+    <string name="text_share">Share Profile</string>
+    <string name="text_github_users">GitHub Users</string>
+</resources>
