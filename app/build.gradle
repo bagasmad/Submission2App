@@ -1,11 +1,15 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-parcelize'
 }
+
 
 android {
     compileSdkVersion 29
     buildToolsVersion "30.0.2"
+
+
 
     defaultConfig {
         applicationId "com.example.submission1app"
@@ -29,6 +33,10 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+
+    buildFeatures{
+        viewBinding true
     }
 }
 

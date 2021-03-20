@@ -72,11 +72,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/text_following"
                     android:textSize="14sp"/>
-
             </LinearLayout>
-
-
-
 
         </LinearLayout>
 

@@ -16,7 +16,6 @@
         </activity>
         <activity android:name=".AboutActivity" />
         <activity android:name=".DetailActivity" />
-        <activity android:name=".SplashScreenActivity" />
         <activity android:name=".MainActivity"/>
     </application>
 
