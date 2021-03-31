@@ -11,7 +11,7 @@ class DetailActivity : AppCompatActivity(), View.OnClickListener {
         const val EXTRA_USER_DATA = "user_data"
     }
 
-    private lateinit var userData: UserDatas
+    private lateinit var userData: UsersData
     private lateinit var userURL: String
     private lateinit var binding: ActivityDetailBinding
 
@@ -19,23 +19,17 @@ class DetailActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         binding = ActivityDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        userData = intent.getParcelableExtra(EXTRA_USER_DATA) as UserDatas
-        userURL = "https://github.com/" + userData.username
-        //memasukkan data ke dalam views
-        binding.textUsername.text = userData.username
-        binding.textRealname.text = userData.name
-        binding.textReplaceableFollowers.text = userData.follower.toString()
-        binding.textReplaceableFollowing.text = userData.following.toString()
-        binding.textReplaceableRepositories.text = userData.repository.toString()
-        binding.textReplaceableLocation.text = userData.location
-        binding.textReplaceableCompany.text = userData.company
-        binding.imageDisplayPicture.setImageResource(
-            this.resources.getIdentifier(
-                userData.avatar?.substring(
-                    1
-                ), null, this.packageName
-            )
-        )
+        userData = intent.getParcelableExtra(EXTRA_USER_DATA) as UsersData
+//        userURL = "https://github.com/" + userData.username
+//        //memasukkan data ke dalam views
+          binding.textUsername.text = userData.login
+//        binding.textRealname.text = userData.name
+//        binding.textReplaceableFollowers.text = userData.follower.toString()
+//        binding.textReplaceableFollowing.text = userData.following.toString()
+//        binding.textReplaceableRepositories.text = userData.repository.toString()
+//        binding.textReplaceableLocation.text = userData.location
+//        binding.textReplaceableCompany.text = userData.company
+
 
         binding.buttonBack.setOnClickListener(this)
         binding.buttonGo.setOnClickListener(this)
@@ -51,13 +45,13 @@ class DetailActivity : AppCompatActivity(), View.OnClickListener {
             }
             (R.id.button_share) -> {
                 //Membuat intent implicit untuk mengirimkan data berupa teks
-                val sendIntent = Intent(Intent.ACTION_SEND)
-                sendIntent.putExtra(
-                    Intent.EXTRA_TEXT,
-                    "Visit and follow ${userData.name} the developer at $userURL"
-                )
-                sendIntent.type = "text/plain"
-                startActivity(sendIntent)
+//                val sendIntent = Intent(Intent.ACTION_SEND)
+//                sendIntent.putExtra(
+//                    Intent.EXTRA_TEXT,
+////                    "Visit and follow ${userData.name} the developer at $userURL"
+//                )
+//                sendIntent.type = "text/plain"
+//                startActivity(sendIntent)
             }
             (R.id.button_back) -> {
                 finish()
